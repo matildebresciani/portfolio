@@ -1,3 +1,13 @@
+@font-face {
+  font-family: TANPearl;
+  src: url(../font/tan-pearl-webfont.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(../font/avenir-book-webfont.woff2) format('woff2');
+}
+
 html {
     --color1: #335938;
     --color2: #8FAC8B;
@@ -8,12 +18,19 @@ html {
 
 body {
     margin: 0 auto;
-    font-family: Avenir, sans-serif;
     background-color: var(--color4);
   }
 
 main {
     max-width: 1200px;
+}
+
+h1, h2, h3 {
+  font-family: TANPearl;
+}
+
+p, a {
+  font-family: Avenir;
 }
   
 a {
