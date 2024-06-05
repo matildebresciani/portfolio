@@ -17,12 +17,13 @@ html {
 }
 
 body {
-    margin: 0 auto;
-    background-color: var(--color4);
+  margin: 0;
+  background-color: var(--color4);
   }
 
 main {
-    max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 h1, h2, h3 {
@@ -50,6 +51,10 @@ p {
 a {
     color: var(--color2);
   }
+
+img {
+  max-width: 100%;
+}
   
   /* header */
   
@@ -58,6 +63,8 @@ a {
     position: relative;
     width: 100%;
     height: 86px;
+    max-width: 1200px;
+    margin: auto;
   }
   
   header ul {
@@ -176,7 +183,7 @@ a {
     height: auto;
   }
 
-  #section1, #section2, #section3 {
+  #section1, #section2 {
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 1em;
@@ -214,7 +221,48 @@ a {
     padding-right: 25px;  
   }
 
+  /* slider */
+  .slider {
+/*     margin: 0.5%;
+    margin-bottom: 0.5%; */
+    width: 100%;
+    overflow: hidden;
+  }
+  .slider-container {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    animation: slide 20s linear infinite;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .slide {
+    min-width: 50%;
+/*     transition: transform 10s ease; */
+  }
+  .slide img {
+    width: 400px;
+    height: 400px;
+    padding: 1em;
+    max-width: 100%;
+    display: block;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-350%);
+    }
+  }
+
+
   /* footer */
+
+  footer {
+    margin: 0;
+    padding: 0;
+  }
 
   .wave {
     margin: 0;
@@ -248,6 +296,7 @@ a {
     text-align: center;
     padding-bottom: 1em;
     color: var(--color4);
+    max-width: none;
   }
   
   @media (min-width: 700px) {
@@ -264,6 +313,12 @@ a {
         border-radius: 50px;
         background-color: var(--color4);
     }
+    
+    .active {
+      border: solid 1px var(--color1);
+      border-radius: 50px;
+      background-color: var(--color4);
+    }
 
     header .menu {
       clear: none;
@@ -273,4 +328,67 @@ a {
     header .menu-icon {
       display: none;
     }
+
+    #section1 {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    #section2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+    }
+
+    .slider-container {
+      display: flex;
+      width: 800px;
+      height: 400px;
+      animation: slide 20s linear infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-400%);
+      }
+    }
+
+    #projekter h2 {
+      text-align: center;
+      font-size: 28px;
+    }
+
+    #projekter h3 {
+      font-size: 24px;
+    }
+
+    #project1, #project3, #project5 {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1em;
+      padding-top: 2em;
+      padding-bottom: 1em;
+    }
+  
+    #project2, #project4 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1em;
+      padding-top: 2em;
+      padding-bottom: 1em;
+    }
+
+    .left {
+      grid-column: 1/2;
+      grid-row: 1;
+    }
+
+    .right {
+      grid-column: 2/4;
+      grid-row: 1;
+    }
+
   }
