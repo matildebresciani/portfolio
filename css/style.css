@@ -27,10 +27,24 @@ main {
 
 h1, h2, h3 {
   font-family: TANPearl;
+  color: var(--color1);
+}
+
+h1 {
+  padding-left: 10px;
+  margin-left: 15px;
+}
+
+h2 {
+  line-height: 40px;
 }
 
 p, a {
   font-family: Avenir;
+}
+
+p {
+  max-width: 65ch;
 }
   
 a {
@@ -150,8 +164,74 @@ a {
     top: 0;
   }
 
-  footer {
+  .ikon {
+    text-align: center;
+    padding: 1em;
+    margin: 15px;
+  }
+
+  .ikon img {
+    aspect-ratio: 122/11;
+    width: 150px;
+    height: auto;
+  }
+
+  #section1, #section2, #section3 {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  #section2 {
     background-color: var(--color2);
+  }
+
+  #section2 h3 {
+    color: var(--color4);
+  }
+
+  dl {
+    font-family: Avenir;
+    color: var(--color3);
+  }
+
+  dt, dd {
+    margin: 5px;
+  }
+
+  dt {
+    padding-top: 10px;
+  }
+  
+  dd {
+    margin-left: 30px;
+
+  }
+
+  #project1, #project2, #project3, #project4, #project5, #projekter h2 {
+    padding-left: 25px;
+    padding-right: 25px;  
+  }
+
+  /* footer */
+
+  .wave {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .wave img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .footer_indhold {
+    background-color: var(--color2);
+    margin: 0;
+    padding: 0;
   }
 
   .logo_footer {
