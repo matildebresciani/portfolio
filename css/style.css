@@ -36,7 +36,7 @@ h1 {
   margin-left: 15px;
 }
 
-h2 {
+h3 {
   line-height: 40px;
 }
 
@@ -216,9 +216,36 @@ img {
 
   }
 
+  #section3 h2 {
+    text-align: center;
+  }
+
+  #info {
+    display: flex;
+    justify-content: center;
+  
+  }
+
+  #info img {
+    aspect-ratio: 800/800;
+    width: 40px;
+    height: auto;
+    padding-right: 0.5em;
+  }
+
+  #phone, #mail, #linkedin {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+  }
+
   #project1, #project2, #project3, #project4, #project5, #projekter h2 {
     padding-left: 25px;
     padding-right: 25px;  
+  }
+
+  .left img, .right img {
+    border-radius: 50px;
   }
 
   /* slider */
@@ -238,12 +265,12 @@ img {
   }
   .slide {
     min-width: 50%;
-/*     transition: transform 10s ease; */
+    padding: 1em;
+    transition: transform 10s ease;
   }
   .slide img {
     width: 400px;
     height: 400px;
-    padding: 1em;
     max-width: 100%;
     display: block;
   }
@@ -254,6 +281,24 @@ img {
     100% {
       transform: translateX(-350%);
     }
+  }
+
+  .button {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .button a {
+    font-size: 20px;
+    border: solid 1px var(--color1);
+    border-radius: 50px;
+    background-color: var(--color4);
+    padding: 0.5em;
+    text-decoration: none;
+  }
+
+  .button a:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   }
 
 
@@ -344,7 +389,7 @@ img {
       display: flex;
       width: 800px;
       height: 400px;
-      animation: slide 20s linear infinite;
+      animation: slide 50s linear infinite;
     }
 
     @keyframes slide {
@@ -352,7 +397,7 @@ img {
         transform: translateX(0);
       }
       100% {
-        transform: translateX(-400%);
+        transform: translateX(-600%);
       }
     }
 
