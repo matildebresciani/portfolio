@@ -46,6 +46,7 @@ p, a {
 
 p {
   max-width: 65ch;
+  line-height: 150%;
 }
   
 a {
@@ -183,6 +184,11 @@ img {
     height: auto;
   }
 
+  #portrait img {
+    width: 436px;
+    height: auto;
+  }
+
   #section1, #section2 {
     padding-left: 25px;
     padding-right: 25px;
@@ -283,6 +289,10 @@ img {
     }
   }
 
+  #projekter h2 {
+    line-height: 150%;
+  }
+
   .button {
     margin-top: 2em;
     margin-bottom: 2em;
@@ -377,6 +387,10 @@ img {
     #section1 {
       display: grid;
       grid-template-columns: 1fr 2fr;
+    }
+
+    #section1_indhold {
+      padding-left: 3em;
     }
 
     #section2 {
