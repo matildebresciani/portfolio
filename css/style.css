@@ -56,6 +56,10 @@ a {
 img {
   max-width: 100%;
 }
+
+a:hover {
+  cursor: pointer;
+}
   
   /* header */
   
@@ -66,6 +70,7 @@ img {
     height: 86px;
     max-width: 1200px;
     margin: auto;
+    z-index: 2;
   }
   
   header ul {
@@ -184,6 +189,36 @@ img {
     height: auto;
   }
 
+  #forside_main {
+    max-width: 100%;
+  }
+
+  #lottiefiles {
+    position: relative;
+  }
+
+  #lottiefiles .wave {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+  }
+
+  dotlottie-player {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #forside_indhold {
+    background-color: var(--color2);
+    margin: 0;
+    padding: 1em;
+  }
+
+  #forside_indhold h3 {
+    color: var(--color4);
+    text-align: center;
+  }
+
   #portrait img {
     width: 436px;
     height: auto;
@@ -233,6 +268,7 @@ img {
   }
 
   #info img {
+    display: block;
     aspect-ratio: 800/800;
     width: 40px;
     height: auto;
@@ -243,6 +279,16 @@ img {
     display: flex;
     align-items: center;
     padding: 1em;
+  }
+
+  #linkedin a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  #linkedin:hover {
+    cursor: pointer;
   }
 
   #project1, #project2, #project3, #project4, #project5, #projekter h2 {
@@ -305,10 +351,16 @@ img {
     background-color: var(--color4);
     padding: 0.5em;
     text-decoration: none;
+    margin: 1em;
   }
 
   .button a:hover {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
   }
 
 
@@ -353,6 +405,13 @@ img {
     color: var(--color4);
     max-width: none;
   }
+
+  @media (max-width: 699px) {
+    #forside_indhold h3 {
+      font-size: 12px;
+      line-height: 190%;
+    }
+  }
   
   @media (min-width: 700px) {
     header li {
@@ -383,6 +442,11 @@ img {
     header .menu-icon {
       display: none;
     }
+
+    #forside_indhold h3 {
+      font-size: 18px;
+    }
+  
 
     #section1 {
       display: grid;
