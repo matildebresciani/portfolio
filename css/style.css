@@ -45,9 +45,11 @@ p, a {
 }
 
 p {
-  max-width: 65ch;
+/*   max-width: 65ch; */
   line-height: 150%;
 }
+
+
   
 a {
     color: var(--color2);
@@ -55,10 +57,6 @@ a {
 
 img {
   max-width: 100%;
-}
-
-a:hover {
-  cursor: pointer;
 }
   
   /* header */
@@ -287,7 +285,7 @@ a:hover {
     height: 100%;
   }
 
-  #linkedin:hover {
+  #linkedin img:hover {
     cursor: pointer;
   }
 
@@ -298,6 +296,7 @@ a:hover {
 
   .left img, .right img {
     border-radius: 50px;
+    margin-top: 1.5em;
   }
 
   /* slider */
@@ -337,6 +336,18 @@ a:hover {
 
   #projekter h2 {
     line-height: 150%;
+    margin-bottom: 0;
+  }
+
+  .projekt_intro {
+    display: grid;
+    justify-content: center;
+  }
+  
+  .projekt_intro p {
+    max-width: 80ch;
+    margin-left: 2em;
+    margin-right: 2em;
   }
 
   .button {
