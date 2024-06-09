@@ -1,0 +1,392 @@
+header {
+    background-color: var(--color4);
+    position: relative;
+    width: 100%;
+    height: 86px;
+    max-width: 1200px;
+    margin: auto;
+    z-index: 2;
+  }
+  
+  header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: var(--color4);
+  }
+  
+  header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+  header li a:hover {
+    background-color: #f4f4f4;
+  }
+  
+  header .logo {
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    margin: 8px 15px;
+  }
+  
+  header .logo img {
+    height: auto;
+    width: 140px;
+  }
+  
+  header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  header .menu-icon .navicon {
+    background: var(--color1);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  header .menu-icon .navicon:before,
+  header .menu-icon .navicon:after {
+    background: var(--color1);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  header .menu-btn {
+    display: none;
+  }
+  
+  header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /* Forside */
+  #forside_main {
+    max-width: 100%;
+  }
+  
+  #lottiefiles {
+    position: relative;
+  }
+  
+  #lottiefiles .wave {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+  }
+  
+  dotlottie-player {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  #forside_indhold {
+    background-color: var(--color2);
+    margin: 0;
+    padding: 1em;
+  }
+  
+  #forside_indhold h3 {
+    color: var(--color4);
+    text-align: center;
+  }
+  
+  #portrait img {
+    width: 436px;
+    height: auto;
+  }
+  
+  #section1, #section2 {
+    padding: 1em 25px;
+  }
+  
+  #section2 {
+    background-color: var(--color2);
+  }
+  
+  #section2 h3 {
+    color: var(--color4);
+  }
+  
+  #section3 h2 {
+    text-align: center;
+  }
+
+  #info {
+    text-align: center;
+  }
+  
+  #projekter h2 {
+    line-height: 150%;
+    margin: 0 1.5em;
+  }
+  
+  .projekt_intro {
+    display: grid;
+    justify-content: center;
+  }
+  
+  .projekt_intro p {
+    max-width: 80ch;
+    margin: 0 2em;
+  }
+
+  #project1, #project2, #project3, #project4, #project5 {
+    margin: 1.5em;
+  }
+
+  
+  .button {
+    margin: 2em 0;
+  }
+  
+  /* Slider */
+  .slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slider-container {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    animation: slide 20s linear infinite;
+    margin: 1em 0;
+  }
+  
+  .slide {
+    min-width: 50%;
+    padding: 1em;
+    transition: transform 10s ease;
+  }
+  
+  .slide img {
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    display: block;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-350%);
+    }
+  }
+  
+  .wave {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .wave img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .footer_indhold {
+    background-color: var(--color2);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo_footer {
+    text-align: center;
+    padding-top: 1em;
+  }
+  
+  .logo_footer img {
+    height: auto;
+    width: 140px;
+  }
+  
+  @media (max-width: 899px) {
+    #forside_indhold h3 {
+      font-size: 12px;
+      line-height: 190%;
+    }
+
+.project, .left, .right {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.prject h3 {
+    order: 0;
+}
+
+.project img {
+    order: 4;
+}
+
+.project p {
+    order: 2;
+}
+
+.project p:last-child {
+    order: 3;
+}
+
+.project .button {
+    order: 1;
+}
+
+
+  }
+  
+  @media (min-width: 900px) {
+    header li {
+      float: left;
+    }
+    header li a {
+      padding: 5px 10px;
+      margin: 25px 15px;
+    }
+  
+    header li a:hover {
+      border: solid 1px var(--color1);
+      border-radius: 50px;
+      background-color: var(--color4);
+    }
+  
+    .active {
+      border: solid 1px var(--color1);
+      border-radius: 50px;
+      background-color: var(--color4);
+    }
+  
+    header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    header .menu-icon {
+      display: none;
+    }
+  
+    #forside_indhold h3 {
+      font-size: 18px;
+    }
+  
+    #section1 {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  
+    #section1_indhold {
+      padding-left: 3em;
+    }
+  
+    #section2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+    }
+
+    #info {
+        display: flex;
+        justify-content: center;
+      }
+      
+  
+    .slider-container {
+      display: flex;
+      width: 800px;
+      height: 400px;
+      animation: slide 50s linear infinite;
+    }
+  
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-600%);
+      }
+    }
+  
+    #projekter h2 {
+      text-align: center;
+      font-size: 28px;
+    }
+  
+    #projekter h3 {
+      font-size: 24px;
+    }
+  
+    #project1, #project3, #project5 {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1em;
+      padding: 2em 0 1em;
+    }
+  
+    #project2, #project4 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1em;
+      padding: 2em 0 1em;
+    }
+  
+    .left {
+      grid-column: 1/2;
+      grid-row: 1;
+    }
+  
+    .right {
+      grid-column: 2/4;
+      grid-row: 1;
+    }
+  }
+  
