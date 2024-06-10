@@ -130,6 +130,7 @@ header {
     background-color: var(--color2);
     margin: 0;
     padding: 1em;
+    min-height: 210px;
   }
   
   #forside_indhold h3 {
@@ -252,9 +253,14 @@ header {
   
   @media (max-width: 899px) {
     #forside_indhold h3 {
-      font-size: 12px;
+      font-size: 13px;
       line-height: 190%;
     }
+
+    #portrait {
+        display: flex;
+        justify-content: center;
+      }
 
 .project, .left, .right {
     display: flex;
@@ -281,8 +287,6 @@ header {
 .project .button {
     order: 1;
 }
-
-
   }
   
   @media (min-width: 900px) {
@@ -314,10 +318,7 @@ header {
     header .menu-icon {
       display: none;
     }
-  
-    #forside_indhold h3 {
-      font-size: 18px;
-    }
+
   
     #section1 {
       display: grid;
