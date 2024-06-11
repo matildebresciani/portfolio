@@ -106,7 +106,6 @@ header {
     top: 0;
   }
   
-  /* Forside */
   #forside_main {
     max-width: 100%;
   }
@@ -154,7 +153,7 @@ header {
   #section2 h3 {
     color: var(--color4);
   }
-  
+
   #section3 h2 {
     text-align: center;
   }
@@ -184,10 +183,10 @@ header {
 
   
   .button {
-    margin: 2em 0;
+    display: grid;
+    justify-content: center;
   }
   
-  /* Slider */
   .slider {
     width: 100%;
     overflow: hidden;
@@ -268,8 +267,8 @@ header {
 }
 
 
-.prject h3 {
-    order: 0;
+.project h3 {
+    order: 1;
 }
 
 .project img {
@@ -284,9 +283,19 @@ header {
     order: 3;
 }
 
-.project .button {
-    order: 1;
-}
+  }
+
+  @media (min-width: 600px) and (max-width: 899px) {
+    #section1, #section2 {
+      display: grid;
+      justify-content: center;
+      align-items: center; 
+      text-align: left; 
+  }
+  
+  #section2 > div {
+    max-width: 200px;
+  }
   }
   
   @media (min-width: 900px) {
@@ -335,6 +344,18 @@ header {
       justify-items: center;
     }
 
+    #uddannelse {
+      grid-column: 1/2;
+    }
+
+    #arbejde {
+      grid-column: 2/3;
+    }
+
+    #kompetencer {
+      grid-column: 3/4;
+    }
+
     #info {
         display: flex;
         justify-content: center;
@@ -370,7 +391,7 @@ header {
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 1em;
-      padding: 2em 0 1em;
+      padding: 2em 0 0;
     }
   
     #project2, #project4 {

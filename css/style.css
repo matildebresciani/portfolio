@@ -74,7 +74,7 @@ dd {
 
 .ikon {
   text-align: center;
-  padding: 1em;
+  padding: 4em;
   margin: 15px;
 }
 
@@ -87,12 +87,17 @@ dd {
 .left img, .right img {
   border-radius: 50px;
   margin-top: 1.5em;
+  width: 1000px;
+  height: auto;
+}
+
+#section1_indhold p {
+  max-width: 65ch;
 }
 
 #info img {
-  aspect-ratio: 800/800;
   width: 40px;
-  height: auto;
+  height: 40px;
   padding-right: 0.5em;
 }
 
